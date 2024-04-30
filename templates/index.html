@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A website for careers in computing">
+    <meta name="author" content="Test author">
+    <meta name="viewport" width="device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/cssfamily=Roboto">
+    <link rel="stylesheet" href="static/main.css">
+    <title>Home</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#about">About</a>
+      <a href="#career-listings">Apply</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <header>
+      <div class="text">
+        <h1>Careers at Testco</h1>
+        <p>Welcome to the homepage of Testco, We are providing careers in computing.</p>
+      </div>
+      </header>
+
+    <main>
+      <div id="about">
+        <h2>About us</h2>
+      <img class="sub-image" src="static/sub-image.jpg"alt="sub-image">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu felis bibendum ut tristique et egestas. Urna nec tincidunt praesent semper feugiat. Pharetra vel turpis nunc eget lorem dolor sed. Adipiscing diam donec adipiscing tristique risus nec feugiat. Fringilla urna porttitor rhoncus dolor purus non enim praesent elementum. Adipiscing diam donec adipiscing tristique risus nec feugiat in. Aliquam sem et tortor consequat id porta. Fermentum dui faucibus in ornare. Pretium fusce id velit ut tortor pretium. Eu lobortis elementum nibh tellus molestie nunc non blandit. Sit amet justo donec enim diam vulputate ut pharetra. Dictum sit amet justo donec enim diam vulputate ut. Accumsan tortor posuere ac ut consequat semper viverra. Sodales neque sodales ut etiam sit amet nisl purus in. Nisl suscipit adipiscing bibendum est ultricies integer quis. Euismod quis viverra nibh cras pulvinar.Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Ipsum dolor sit amet consectetur adipiscing elit duis tristique</p>
+        </div>
+
+      <h2>Open Positions</h2>
+      {% for job in jobs%}
+      <div id="career-listing">
+        <div class="career">
+          <button class="apply">Apply</button>
+          <p class="job-name">{{job.name}}</p>
+          <p>Salary:{{job.currency}}{{job.salary}}</p>
+          <p>Location: {{job.location}}</p><hr>
+        </div>
+          {% endfor %}
+         </div>
+  
+      <div style="text-align:center;">
+        <button id="contact">Contact us!</button>
+      </div>
+      </main>
+    <p>Testco.inc</p>
+  </body>
+</html>

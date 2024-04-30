@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding:0;
+  }
+  body{
+    font-family:'Roboto',sans-serif;
+  }
+  main{
+    padding: 1rem 5rem;
+  }
+  h1,h2{
+    text-align:center;
+    font-size:2em;
+    margin-bottom:1rem;
+  }
+  h1{
+    font-size:6rem;
+    padding-top:30vh;
+  }
+  header{
+    height:70vh;
+    background-image :url("main-image.jpg");
+    background-size:cover;
+    text-align:center;
+    text-decoration-style:bolder;
+  }
+  header p{
+    font-size :1.5rem;
+    background: white;
+  }
+  .sub-image{
+    max-height:50vh;
+    float:right;
+    margin-left:1rem;
+    object-fit:cover;
+    overflow: hidden
+  }
+  #about{
+    background-color: #74a66a;
+    padding:2rem;
+    text-align:justify;
+    margin:2rem 0rem;
+    line-height:1.6rem;
+    overflow: hidden
+  }
+  .career{
+    margin:1em;
+    margin-top:2em;
+    min-height: 70px;
+    font-size: 18px;
+    line-height:1.4rem;
+  }
+  .apply{
+    width:5rem;
+    height:2rem;
+    float:right;
+    padding:0.5em;
+    border:1px solid black;
+    border-radius:4px;
+  }
+  .apply:hover{
+    background:blue;
+    color:white;
+  }
+  #contact{
+    width: 8rem;
+    height:3.5rem;
+    border:2px solid black;
+    border-radius:8px;
+    margin-top:3rem;
+    background:indianred;
+  }
+  .navbar{
+    position:fixed;
+    font-size :1.5rem;
+  }
+  a{
+    background:transparent;
+    color: black;
+    text-decoration:none;
+    margin: 1rem;
+  }
