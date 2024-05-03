@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/cssfamily=Roboto">
+  <title>Jobs</title>
+  <style>
+    *{
+      font-family:'Roboto',sans-serif;
+    }
+    header{
+      background-image:url("/static/main-image.jpg");
+      height : 50vh;
+      width: 100vw;
+      background-size  :cover ;
+      background-position:center;
+    }
+    input,textarea{
+      display:block;
+      margin:1rem;
+    }
+    h1,h2{
+      text-align:center;
+      font-size:2.5rem;
+    }
+  </style>
+</head>
+<body>
+  {% include 'nav.html' %}
+  <header>
+    <h1>Job Application</h1>
+    <p>This page is for submitting form applications.</p>
+    </header>
+  <main>
+    <h2>Testco Careers</h2>
+    <h3>{{ job.name }}</h3>
+    <p>{{ job.location }}</p>
+    <h3>Responsibilites</h3>
+    <ul>
+    {% for lines in job['responsibilities'].split('\n') %}
+      <li>{{ lines }}</li>
+    {% endfor %}
+    </ul>
+    <h3>Requirements</h3>
+    <ol>
+    {% for lines in job['requirements'].split('\n') %}
+      <li>{{ lines }}</li>
+    {% endfor %}
+    <h3>Salary</h3>
+    <p>{{ job.salary }}{{ job.currency }}</p>
+    </main>
+  <h2>Application</h2>
+  <form action="#">
+    <input type="text" name="name" placeholder="Enter your name">
+    <input type="email" name="email" placeholder="Enter your email">
+    <input type="text" name="linkedin" placeholder="Enter your linkedin">
+    <textarea name="education" rows="8" cols="40">Education</textarea>
+    <textarea name="work" rows="8" cols="40">Work Experience</textarea>
+    <input type="submit" name="submit">
+  </form>
+  {% include 'footer.html' %}
+</body>
+</html>
